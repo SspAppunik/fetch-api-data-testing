@@ -1,30 +1,12 @@
-<!-- <div *ngFor="let item of result | keyvalue">     
-  <tr>{{item.key}}</tr>
-  <tr>{{item.value}}</tr>
-</div> -->
-
 <table class="table table-striped">
 	<thead>
 		<tr>
-      <th scope="col">answer</th>
-      <th scope="col">captured</th>
-      <th scope="col">disclosed</th>
-      <th scope="col">docType</th>
-			<th scope="col">evidence</th>
-			<th scope="col" >flag</th>
-			<th scope="col">kpi</th>
-			<th scope="col">modelType</th>
-      <th scope="col">score</th>
-      <th scope="col">text_answer</th>
-      <th scope="col">text_context</th>
-      <th scope="col">text_score</th>
-      <th scope="col">uuid</th>
-      <th scope="col">validation</th>
+      <th scope="col" *ngFor="let item of result |keyvalue">{{item.key}}</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td scope="col" *ngFor="let item of result |keyvalue">{{ item.value }}</td>
+			<td scope="col" *ngFor="let item of result |keyvalue">{{ item.value }} </td>
       </tr>
       <tr>
         <td scope="col" *ngFor="let item of result1 |keyvalue">{{ item.value }}</td>
@@ -38,12 +20,6 @@
             <tr>
               <td scope="col" *ngFor="let item of result4 |keyvalue">{{ item.value }}</td>
               </tr>
-			<!-- <td>		
-				{{ country.name }}
-			</td>
-			<td>{{ country.area | number }}</td>
-			<td>{{ country.population | number }}</td> -->
-		
 	</tbody>
 </table>
 <router-outlet></router-outlet>
