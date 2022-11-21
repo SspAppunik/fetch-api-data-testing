@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IModel } from './model.config';
+import { ITest } from './model.config';
 import { DataService } from './services/data.service';
 @Component({
   selector: 'app-root',
@@ -10,11 +10,11 @@ export class AppComponent implements OnInit {
   title = 'fetch-api-data-testing';
 
   constructor(private service: DataService) {}
-  result!: IModel;
-  result1!: IModel;
-  result2!: IModel;
-  result3!: IModel;
-  result4!: IModel;
+  result!: ITest;
+  result1!: ITest;
+  result2!: ITest;
+  result3!: ITest;
+  result4!: ITest;
  
   
   ngOnInit() {
